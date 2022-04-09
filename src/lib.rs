@@ -57,7 +57,7 @@ impl<T: AsRef<[u8]>> BloomFilter<T> {
         BloomFilterContainsResponse::Maybe
     }
 
-    /// Calculates the K number of hash functions for the given value,
+    /// Calculates the K number of hash values for the given value,
     /// and reduce the hash values modulo the size of the bit vector.
     fn calculate_hash_indices(&self, value: &T) -> Vec<usize> {
         let mut fnv = FnvHasher::default();
